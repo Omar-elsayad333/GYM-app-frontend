@@ -14,7 +14,7 @@ function App() {
           omar elsayad
         </p>
         {
-          data &&
+          data.length > 0 &&
           data.map((item) => (
             <p key={item._id}>{item.title}</p>
           ))
