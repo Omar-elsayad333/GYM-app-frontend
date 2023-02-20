@@ -15,9 +15,9 @@ function App() {
         </p>
         {
           data.length > 0 &&
-          data.map((item) => (
-            <p key={item._id}>{item.title}</p>
-          ))
+          data.map((item) => {
+            return <p key={item._id}>{item.title}</p>
+          })
         }
         <a
           className="App-link"
