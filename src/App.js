@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import useTestBack from './container/useTestBack';
 
 function App() {
+
+  const { data } = useTestBack()
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,6 +13,12 @@ function App() {
         <p>
           omar elsayad
         </p>
+        {
+          data &&
+          data.map((item) => (
+            <p key={item._id}>{item.title}</p>
+          ))
+        }
         <a
           className="App-link"
           href="https://reactjs.org"
